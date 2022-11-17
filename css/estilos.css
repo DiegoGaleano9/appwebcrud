@@ -1,0 +1,125 @@
+*{  margin: 0;
+    padding: 0;
+  
+}
+html{
+    height: 100%;
+}
+body{
+    min-height: 100%;
+    
+}
+.header
+{
+    grid-area: header;
+    background-color: rgb(242, 247, 0);
+    border-radius: 18px; 
+    margin-top: 1%;
+    height: 50px; 
+    text-align: center;
+ }
+ .header li{
+    list-style-type: none;
+    display:inline-grid;
+    margin-top: 1%;
+    margin-right: 1%;
+    background-color: rgb(107, 224, 146);
+    width: 15%;
+    border-radius: 18px;
+    
+  
+}
+.header li a
+{
+    color: black;
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    text-align: center;
+}
+#subseccion1, #subseccion2, #subseccion3{
+    top: 100%;
+    left: 0px;   
+    background-color: rgb(28, 118, 179);
+    font: normal 0.8em arial;
+    padding: 0.2em 0.5em;
+    display: none;
+    width: 90%;
+    border-radius: 7px;
+    z-index: 1;
+    color: black;
+    
+}
+#contenedor
+{
+    background-color: rgb(107, 224, 146);
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 25%;
+    margin-top: 5%;
+    text-align: center;
+
+}
+
+#contenedor #tabla
+{
+       margin-top: 10%;
+       margin-left: 15%;
+       margin-right: auto;
+       text-align: center;
+
+}
+
+#contenedor #cajasdetexto
+{
+    text-align: center;
+   
+}
+#contenedor #cajasdetexto #cdtv
+{
+  size: 100px;
+}
+.navbar{
+    grid-area: navbar;
+    background-color: blue;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: brown;
+}
+.main{
+    grid-area: main;
+    background-color: cornsilk;    
+    text-align: center;    
+}
+.footer{
+    grid-area: footer;
+    background-color: chocolate;
+}
+.grid-container > * {
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;    
+  }
+  .grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template:
+      "header"  80px
+      "navbar"  50px
+      "main"    auto
+      "sidebar" 50px
+      "footer"  50px;
+}
+@media (min-width: 900px) {
+    .grid-container {
+      grid-template:
+        "header  header header"  80px
+        "navbar  main   sidebar" auto
+        "footer  footer footer"  100px /
+        200px    auto   200px;
+    } 
+  }
+
+  
